@@ -1,3 +1,15 @@
 <!--pages/home/home.wxml-->
-<text class="title">hello world</text>
-<button size="mini">button</button>
+<!-- 小程序数据绑定 {{}} Mustache-->
+<view>nihao,{{name}}</view>
+<view>年龄：{{age+30}}</view>
+
+
+<!-- 列表展示 wx:for -->
+<view wx:for="{{students}}">{{item.name}}-{{item.age + '岁'}}</view>
+
+<!-- 事件监听  改变data-->
+<view>当前计数：{{counter}}</view>
+<button size="mini" bindtap="handleAddClick">+</button>
+<button size="mini" bindtap="handleSubClick">-</button>
+<!-- <view>减法：当前计数：{{counterJian}}</view>
+<button size="mini" >-</button> -->
